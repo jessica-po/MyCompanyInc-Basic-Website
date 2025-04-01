@@ -1,0 +1,160 @@
+@import './base.css';
+
+:root {
+--primary-color: #1a1a1a;
+--secondary-color: #4CAF50;
+--accent-color: #666666;
+--text-color: #999999;
+--light-text: #cccccc;
+--bg: #1a1a1a;
+--card-bg: #242424;
+--hover-color: #4CAF50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--bg);
+}
+
+.whole-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.side-bar {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  color: var(--light-text);
+  position: fixed;
+  top: 0;
+  left:0;
+  z-index:1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.nav-bar-title { display: inline-block; margin-right: 2rem;}
+
+.nav-bar-title h1 {
+  font-size: 1.5rem;
+  margin:0;
+  padding:0;
+  border:none;
+  color: var(--light-text);
+}
+
+.nav-links {
+  display: inline-flex; align-items: center; gap: 1rem;
+}
+
+.links {
+  display: inline-block;
+  color: (var(--secondary-color));
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3 ease;
+  border-radius: 4px;
+}
+
+.main-content {
+  flex:1;
+  margin-top: 70px;
+  padding: 2rem;
+  background-color: var(--bg);
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.welcome { text-align: center; margin-bottom: 3rem;}
+
+.welcome h1 {
+  font-size: 2.5 rem;
+  color: (var(--light-text));
+  margin-bottom: 1rem;
+}
+
+.welcome .sub {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.date-time, .service-card, .customer-card, .about-section, .mission {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px ;
+  transition: trasform 0. ease;
+}
+
+.date-time h2, .service-card h3, .customer-card h3, .about-section h3, .mission h2 {
+  color: var(--light-text);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.info-value {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.page-header h1 { color: var(--light-text);}
+
+.subtitle { color: var(--text-color); }
+
+@media (max-width: 768px) {
+  .side-bar {padding: 1rem;}
+
+
+  .nav-bar-title {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .links {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-content {
+    margin-top: 120px;
+    padding: 1rem;
+  }
+
+  .welcome h1 {font-size: 2rem;}
+
+
+
+
+
+
+
+}
